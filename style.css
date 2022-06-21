@@ -11,11 +11,12 @@ body{
 .container{
     height: 95vh;
     width: 90vw;
-    background-color: rgb(124,97,241);
+    background-color: #202848;
     display:  flex;
     justify-content: space-evenly;
     align-items: center;
     flex-direction: column;
+    border-radius: 20px;
 }
 .question-container{
     height: 18vh;
@@ -24,6 +25,13 @@ body{
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
+    animation-name: name;
+    animation-timing-function: cubic-bezier(0.7, 0.8, 0.9 ,1);
+    animation-duration: 1s;
+    animation-fill-mode: both;
+    animation-iteration-count: 1;
+    opacity: 0;
+    transition: 0.2s;
 }
 .question-number{
     height: 5vh;
@@ -33,9 +41,10 @@ body{
     align-items: center;
 }
 .question-number > *{
-    font-size: 20px;
+    font-size: 25px;
     font-family: sans-serif;
-    color: white;
+    color: rgb(163, 163, 163);
+    font-weight: bold;
 }
 .question{
     height: 10vh;
@@ -49,7 +58,17 @@ body{
     font-size: 16px;
     font-weight: bold;
     font-family: sans-serif;
+    letter-spacing: 2px;
+    line-height: 20px;
     color: white;
+    animation-name: name;
+    animation-timing-function: cubic-bezier(0.7, 0.8, 0.9 ,1);
+    animation-duration: 1s;
+    animation-fill-mode: both;
+    animation-iteration-count: 1;
+    animation-delay: 0.2s;
+    opacity: 0;
+    transition: 0.2s;
 }
 
 .options{
@@ -62,72 +81,159 @@ body{
 }
 .ans{
     height: 50px;
-    width: 95%;
-    border-radius: 5px;
-    border: 2px solid  rgb(186, 184, 196);
+    width: 90%;
+    border-radius: 20px;
+    border: 3px solid  #1C466A;
     font-size: 15px;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    font-family: sans-serif;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana;
+    line-height: 5px;
+    letter-spacing: 1px;
     color: white;
+}
+.ans:nth-child(1){
+    animation-name: name;
+    animation-timing-function: cubic-bezier(0.7, 0.8, 0.9 ,1);
+    animation-duration: 1s;
+    animation-fill-mode: both;
+    animation-iteration-count: 1;
+    animation-delay: 0.5s;
+    opacity: 0;
+    transition: 0.2s;
+}
+.ans:nth-child(2){
+    animation-name: name;
+    animation-timing-function: cubic-bezier(0.7, 0.8, 0.9 ,1);
+    animation-duration: 1s;
+    animation-fill-mode: both;
+    animation-iteration-count: 1;
+    animation-delay: 1s;
+    opacity: 0;
+    transition: 0.2s;
+}
+.ans:nth-child(3){
+    animation-name: name;
+    animation-timing-function: cubic-bezier(0.7, 0.8, 0.9 ,1);
+    animation-duration: 1s;
+    animation-fill-mode: both;
+    animation-iteration-count: 1;
+    animation-delay: 1.5s;
+    opacity: 0;
+    transition: 0.2s;
+}
+.click:hover{
+    background-color: rgb(102, 241, 97);
 }
 
 .navigation{
     height: 10vh;
     width: 90%;
-    background-color: rgb(124,97,241);
+   
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    border: 1px solid white;
+    overflow-y: hidden;
+ 
 }
 .navigation button{
-    padding: 10px 30px;
-    font-size: 15px;
+    padding: 25px 55px;
+    font-size: 18px;
     border:  none;
-    color: rgb(124,97,241);
+    color: white;
     font-weight: bold;
-    border-radius: 5px;
+    border-radius: 35px;
+   
+    background-color: #077FEC;
+    animation-name: name;
+    animation-timing-function: cubic-bezier(0.7, 0.8, 0.9 ,1);
+    animation-duration: 1s;
+    animation-fill-mode: both;
+    animation-iteration-count: 1;
+    animation-delay: 2s;
+    opacity: 0;
+    transition: 0.2s;
 }
 
 .start{
-    height: 180px;
+    height: 250px;
     width: 100%;
-    background-color: rgb(124,97,241);
+  
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
+    position: relative;
 }
+
 .start h2{
     font-family: sans-serif;
     color: white;
 }
 .start input{
-
+   background-color: #202848;
     padding: 8px 30px;
-    font-size: 15px;
+    font-size: 20px;
     outline: none;
+    border: 1px solid #077FEC;
+    color: white;
 }
 .start input:focus{
-    border: 2px solid rgb(124,97,241);
+    border: 2px solid #077FEC;
+    background-color: #202848;
 }
 .error{
     border: 1px solid rgb(252, 6, 6);
+    background-color: #202848;
 }
 
-.start button{
-    padding: 8px 50px;
-    border:  1px solid white;
-    font-size: 15px;
-    font-weight: bold;
-    font-family: sans-serif;
-    background: rgb(124,97,241);
-    transition: 2s ease-in-out;
-    color: white;
-}
+
 .start button:hover{
     background: white;
 
+}
+.btn{
+    height: 100px;
+    width: 100px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ 
+}
+.btn p{
+
+    font-size: 25px;
+    font-family: sans-serif;
+    position: absolute;
+   color: white;
+    top: 40px;
+    left: 25px;
+}
+.btn img{
+   height: 150px;
+  
+
+}
+
+@keyframes name {
+    0%{
+        opacity: 0;
+        transform: translateY(200px);
+
+    }
+    25%{
+        opacity: 0;
+        transform: translateY(100px);
+    }
+    50%{
+        opacity: 0.5;
+        transform: translateY(50px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0px)
+    }
+    
 }
