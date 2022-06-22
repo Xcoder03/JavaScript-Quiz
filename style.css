@@ -72,7 +72,7 @@ body{
 }
 
 .options{
-    height: 50vh;
+    height: 280px;
     width: 100%;
     display:  flex;
     flex-direction: column;

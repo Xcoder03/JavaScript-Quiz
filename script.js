@@ -28,7 +28,7 @@ let question = [
     },
     q3 = { 
         ques: "What are methods in OOP",
-        correct: "Storing Variables",
+        correct: "They are used to perform certain actions",
         Answer : [
             {ans: "Storing Variables"},
             {ans: "They are used to perform certain actions"},
@@ -74,16 +74,19 @@ const number = document.querySelector('.ques')
 const navigation = document.querySelector('.navigation')
 const options = document.querySelector('.options')
 const  container = document.querySelector('.question-container')
-const startBtn = document.querySelector('.start button')
+const startBtn = document.querySelector('.btn')
 let nameValue = document.querySelector('.start input')
 const start = document.querySelector('.start')
 const answers = document.querySelectorAll('.ans')
 let questions = document.querySelector('.question p')
 const nextBtn = document.getElementById('next')
 const prevBtn = document.getElementById('prev')
+const printScore = document.querySelector('.score')
+const scores = document.querySelector('.score h3')
 navigation.style.display = "none"
 options.style.display = "none"
 container.style.display = "none"
+printScore.style.display = "none"
 const quiz =  () => {
     
     
@@ -113,17 +116,16 @@ const quiz =  () => {
 
 startBtn.addEventListener('click', () =>{
 
-     if(nameValue.value == ""){
-         nameValue.classList.add("error")
-     }
-     else
-     {
+    
+     
+     
         navigation.style.display = "flex"
         options.style.display = "flex"
         container.style.display = "flex"
          start.style.display = "none" 
+         startBtn.style.display = "none"
          quiz()                 
-    }
+    
 })
 
 
@@ -144,7 +146,12 @@ nextBtn.addEventListener('click', () =>{
     count+=1
     num+=1
     if(count >= question.length){
-        console.log(`Your score is ${score}`)
+        navigation.style.display = "none "
+        options.style.display = "none"
+        container.style.display = "none"
+        scores.textContent = score
+        printScore.style.display = "flex"
+        
     }
     else{    
             number.textContent = num
